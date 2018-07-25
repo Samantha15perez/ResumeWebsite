@@ -42,7 +42,7 @@
             <br />
             <br />
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="height: 26px" Text="Create Account" />
-            <asp:Button ID="Button4" runat="server" OnClick="Button2_Click" style="height: 26px" Text="No thank you" />
+            <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Button" />
             <br />
             </font>
         </asp:Panel>

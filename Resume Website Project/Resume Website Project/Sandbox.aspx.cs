@@ -165,13 +165,55 @@ namespace Resume_Website_Project
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Session["UserName"] = "NotLoggedIn";
-            Page.Response.Redirect(Page.Request.Url.ToString(), true);
+            string connectionString = null;
+            SqlConnection cnn;
+
+            connectionString = WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            cnn = new SqlConnection(connectionString);
+            try
+            {
+                SqlCommand InsertNewUser = new SqlCommand("NameOfProcedure", cnn);
+                InsertNewUser.CommandType = CommandType.StoredProcedure;
+
+                // md5 password storage
+
+                // step 1, calculate MD5 hash from input
+
+                string InputValue = TextBox4.Text.ToString();
+                MD5 EncryptionHash = System.Security.Cryptography.MD5.Create();
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(InputValue);
+                byte[] hash = EncryptionHash.ComputeHash(inputBytes);
+
+                // step 2, convert byte array to hex string
+
+                StringBuilder sb = new StringBuilder();
+
+                for (int i = 0; i < hash.Length; i++)
+                {
+                    sb.Append(hash[i].ToString("X2"));
+                }
+
+                //insert username & password into sql db
+            }
+            catch
+            {
+
+            }
+
+
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
             Session["UserName"] = "CreateAccount";
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
+        }
+
+
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Session["UserName"] = "NotLoggedIn";
             Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
     }
