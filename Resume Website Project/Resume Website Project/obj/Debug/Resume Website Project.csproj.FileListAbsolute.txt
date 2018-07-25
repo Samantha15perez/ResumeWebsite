@@ -227,6 +227,8 @@ C:\Users\Cyberadmin\Desktop\ResumeWebsite\Resume Website Project\Resume Website 
 C:\Users\Cyberadmin\Desktop\ResumeWebsite\Resume Website Project\Resume Website Project\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Cyberadmin\Desktop\ResumeWebsite\Resume Website Project\Resume Website Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Cyberadmin\Desktop\ResumeWebsite\Resume Website Project\Resume Website Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Cyberadmin\Desktop\ResumeWebsite\Resume Website Project\Resume Website Project\obj\Debug\Resume Website Project.csprojResolveAssemblyReference.cache
 C:\Users\Cyberadmin\Desktop\ResumeWebsite\Resume Website Project\Resume Website Project\obj\Debug\Resume Website Project.dll
 C:\Users\Cyberadmin\Desktop\ResumeWebsite\Resume Website Project\Resume Website Project\obj\Debug\Resume Website Project.pdb
+C:\Users\Cyberadmin\Desktop\ResumeWebsite\Resume Website Project\Resume Website Project\obj\Debug\Resume Website Project.csprojAssemblyReference.cache
+C:\Users\Cyberadmin\Desktop\ResumeWebsite\Resume Website Project\Resume Website Project\obj\Debug\Resume Website Project.csproj.CoreCompileInputs.cache
+C:\Users\Cyberadmin\Desktop\ResumeWebsite\Resume Website Project\Resume Website Project\obj\Debug\Resume Website Project.csproj.CopyComplete

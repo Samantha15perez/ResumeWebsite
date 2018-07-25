@@ -20,32 +20,32 @@ namespace Resume_Website_Project
 
         protected void Page_Load(object sender, EventArgs e)
         {
-          
-
-
-            if (Session["UserName"] != null)
+            if (Session["Username"] == null)
             {
-                if (CreateAccount == true)
-                {
-                    Panel1.Visible = false;
-                    Panel2.Visible = false;
-                    Panel4.Visible = true;
-                }
-                if (Session["Username"].ToString() == "NotLoggedIn")
-                {
-                    Panel1.Visible = true;
-                    Panel2.Visible = false;
-                    Panel4.Visible = false;
-                }
-                
+                Session["Username"] = "NotLoggedIn";
+                Page.Response.Redirect(Page.Request.Url.ToString(), true);
+
             }
-           else
+            if (Session["Username"].ToString() == "CreateAccount")
+            {
+                Panel1.Visible = false;
+                Panel2.Visible = false;
+                Panel4.Visible = true;
+            }
+            if (Session["Username"].ToString() == "NotLoggedIn")
+            {
+                Panel1.Visible = true;
+                Panel2.Visible = false;
+                Panel4.Visible = false;
+            }
+            if (Session["Username"].ToString() == "LoggedIn")
             {
                 Panel1.Visible = false;
                 Panel2.Visible = true;
                 Panel4.Visible = false;
             }
 
+            
         }
 
 
@@ -104,7 +104,7 @@ namespace Resume_Website_Project
                         if (PasswordDR[0].ItemArray[1].ToString() == sb.ToString())
                         {
                             Response.Write("Welcome " + TextBox1.Text + "!");
-                            Session["UserName"] = TextBox1.Text;
+                            Session["UserName"] = "LoggedIn";
 
                             
                         
@@ -134,7 +134,7 @@ namespace Resume_Website_Project
             if (Session["UserName"].ToString() != null)
                 {
 
-                    if (CreateAccount == true)
+                    if (Session["Username"].ToString() == "CreateAccount")
                     {
                     Panel4.Visible = true;
                     Panel2.Visible = false;
@@ -165,13 +165,14 @@ namespace Resume_Website_Project
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-
+            Session["UserName"] = "NotLoggedIn";
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            CreateAccount = true;
-            //Page.Response.Redirect(Page.Request.Url.ToString(), true); 
+            Session["UserName"] = "CreateAccount";
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
     }
 }

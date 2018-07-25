@@ -27,7 +27,7 @@
             <asp:Button ID="Button1" runat="server" Text="Log Out" Width="64px" OnClick="Button1_Click" />
         </asp:Panel>
 
-        <asp:Panel ID="Panel4" runat="server" Height="173px" Width="275px">
+        <asp:Panel ID="Panel4" runat="server" Height="187px" Width="275px">
             <font size="2" face="verdana" align="left" color="#8999E5">Please select a username and password.<br />
             <br />
             [UNDER CONSTRUCTION]<br />
@@ -41,7 +41,8 @@
             <asp:TextBox ID="TextBox4" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="height: 26px" Text="Button" />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="height: 26px" Text="Create Account" />
+            <asp:Button ID="Button4" runat="server" OnClick="Button2_Click" style="height: 26px" Text="No thank you" />
             <br />
             </font>
         </asp:Panel>
